@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8228768412902993675}
   - component: {fileID: 8228768412902993679}
   - component: {fileID: 8228768412902993678}
+  - component: {fileID: 5818132211349218868}
   m_Layer: 8
   m_Name: RightLeg
   m_TagString: Untagged
@@ -157,6 +158,18 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5818132211349218868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228768412902993673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d7bbeccd4d4a2b97cf4267867db878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8228768413087005287
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +183,7 @@ GameObject:
   - component: {fileID: 8228768413087005292}
   - component: {fileID: 8228768413087005291}
   - component: {fileID: 8228768413087005290}
+  - component: {fileID: 219651982687469398}
   m_Layer: 8
   m_Name: Ragdoll
   m_TagString: Untagged
@@ -272,6 +286,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &219651982687469398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228768413087005287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d7bbeccd4d4a2b97cf4267867db878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8228768413486147151
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +312,7 @@ GameObject:
   - component: {fileID: 8228768413486147153}
   - component: {fileID: 8228768413486147157}
   - component: {fileID: 8228768413486147156}
+  - component: {fileID: 1836586969254542101}
   m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
@@ -428,6 +455,18 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1836586969254542101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228768413486147151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d7bbeccd4d4a2b97cf4267867db878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8228768413721520140
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +481,7 @@ GameObject:
   - component: {fileID: 8228768413721520142}
   - component: {fileID: 8228768413721520146}
   - component: {fileID: 8228768413721520145}
+  - component: {fileID: 7287998644234369704}
   m_Layer: 8
   m_Name: LeftLeg
   m_TagString: Untagged
@@ -585,6 +625,18 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &7287998644234369704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228768413721520140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d7bbeccd4d4a2b97cf4267867db878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8228768414348738975
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +651,7 @@ GameObject:
   - component: {fileID: 8228768414348738977}
   - component: {fileID: 8228768414348738981}
   - component: {fileID: 8228768414348738980}
+  - component: {fileID: 6183648767503479917}
   m_Layer: 8
   m_Name: RightArm
   m_TagString: Untagged
@@ -742,6 +795,18 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &6183648767503479917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228768414348738975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d7bbeccd4d4a2b97cf4267867db878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8228768414750497981
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +821,7 @@ GameObject:
   - component: {fileID: 8228768414750497983}
   - component: {fileID: 8228768414750497987}
   - component: {fileID: 8228768414750497986}
+  - component: {fileID: 3902524127804274301}
   m_Layer: 8
   m_Name: LeftArm
   m_TagString: Untagged
@@ -899,3 +965,15 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &3902524127804274301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228768414750497981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d7bbeccd4d4a2b97cf4267867db878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
