@@ -14,6 +14,7 @@ namespace Controllers {
         [SerializeField] private LineRenderer aimRenderer = default;
 
         private void Awake() {
+            Cursor.lockState = CursorLockMode.Locked;
             playerTransform = transform;
             ragdollLayer = LayerMask.NameToLayer("Ragdoll");
             yawn = 0.0f;
@@ -30,8 +31,10 @@ namespace Controllers {
 
         private void HandleMovement() {
             Vector3 currentPosition = playerTransform.position;
-            Vector3 deltaPosition = (playerTransform.right * Input.GetAxis("Horizontal")
-                                     + playerTransform.forward * Input.GetAxis("Vertical")) * speed;
+            Vector3 deltaPosition = (
+                playerTransform.right * Input.GetAxis("Horizontal")
+                + playerTransform.forward * Input.GetAxis("Vertical")
+            ) * speed;
             deltaPosition.y = 0f;
             playerTransform.position = currentPosition + deltaPosition;
         }
@@ -39,8 +42,7 @@ namespace Controllers {
         private void HandleCameraMovement() {
             yawn += Input.GetAxis("Mouse X") * mouseSensitivity;
             pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity;
-            if (pitch < -90f) pitch = -90f;
-            else if (pitch > 90f) pitch = 90f;
+            pitch = Mathf.Clamp(pitch, -90f, 90f);
             transform.eulerAngles = new Vector3(pitch, yawn, 0f);
         }
 
