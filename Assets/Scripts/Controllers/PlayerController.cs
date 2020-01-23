@@ -17,18 +17,28 @@ namespace Controllers {
         }
 
         private void Update() {
+            HandleMovement();
+            HandleCameraMovement();
+            HandleAction();
+        }
+
+        private void HandleMovement() {
             Vector3 currentPosition = playerTransform.position;
             playerTransform.position = new Vector3(
                 currentPosition.x + Input.GetAxis("Horizontal") * speed,
                 currentPosition.y,
                 currentPosition.z + Input.GetAxis("Vertical") * speed);
+        }
 
+        private void HandleCameraMovement() {
             yawn += Input.GetAxis("Mouse X") * mouseSensitivity;
             pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity;
             if (pitch < -90f) pitch = -90f;
             else if (pitch > 90f) pitch = 90f;
             transform.eulerAngles = new Vector3(pitch, yawn, 0f);
+        }
 
+        private void HandleAction() {
             if (Input.GetKeyUp("space"))
                 ballSpawnerController.SpawnBall();
         }
