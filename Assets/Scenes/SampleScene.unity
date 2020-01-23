@@ -1365,6 +1365,7 @@ MonoBehaviour:
   ballPrefab: {fileID: 5183930234761651458, guid: 787e62f846e02ea40b29b33fa6f83cdb,
     type: 3}
   ballsParent: {fileID: 24445322}
+  spawnForceModifier: 1000
 --- !u!1 &1951199586
 GameObject:
   m_ObjectHideFlags: 0
