@@ -38,7 +38,7 @@ namespace Controllers {
         }
 
         private void HandleAction() {
-            if (Input.GetKeyUp("space"))
+            if (Input.GetButtonUp("Fire1"))
                 ballSpawnerController.SpawnBall();
         }
     }
