@@ -7,6 +7,7 @@ namespace Controllers {
         [SerializeField] private BoxCollider spawnZone = default;
         [SerializeField] private GameObject ragdollPrefab = default;
         private Bounds spawnBounds;
+        [SerializeField] private float spawnSpeed = 1f;
 
         private void Awake() {
             spawnBounds = spawnZone.bounds;
@@ -15,8 +16,8 @@ namespace Controllers {
 
         private IEnumerator DoSpawns() {
             while (true) {
-                yield return new WaitForSeconds(2f);
-                Instantiate(ragdollPrefab, GetRandomSpawnPosition(), Quaternion.identity, ragdollsParent);
+                yield return new WaitForSeconds(2f / spawnSpeed);
+                Instantiate(ragdollPrefab, GetRandomSpawnPosition(), GetRandomRotation(), ragdollsParent);
             }
         }
 
@@ -25,6 +26,10 @@ namespace Controllers {
                 Random.Range(spawnBounds.min.x, spawnBounds.max.x),
                 Random.Range(spawnBounds.min.y, spawnBounds.max.y),
                 Random.Range(spawnBounds.min.z, spawnBounds.max.z));
+        }
+
+        private static Quaternion GetRandomRotation() {
+            return Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
         }
     }
 }
