@@ -24,10 +24,9 @@ namespace Controllers {
 
         private void HandleMovement() {
             Vector3 currentPosition = playerTransform.position;
-            playerTransform.position = new Vector3(
-                currentPosition.x + Input.GetAxis("Horizontal") * speed,
-                currentPosition.y,
-                currentPosition.z + Input.GetAxis("Vertical") * speed);
+            Vector3 deltaPosition = (playerTransform.right * Input.GetAxis("Horizontal") + playerTransform.forward * Input.GetAxis("Vertical")) * speed;
+            deltaPosition.y = 0f;
+            playerTransform.position = currentPosition + deltaPosition;
         }
 
         private void HandleCameraMovement() {

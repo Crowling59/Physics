@@ -512,6 +512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b872362f1a5c2b648882f52800f3313a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseSensitivity: 2.5
   speed: 0.1
   ballSpawnerController: {fileID: 1664234684}
 --- !u!1001 &8228768413321406976
