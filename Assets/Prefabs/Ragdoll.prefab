@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 8228768413087005291}
   - component: {fileID: 8228768413087005290}
   - component: {fileID: 219651982687469398}
+  - component: {fileID: 3766803807974398801}
   m_Layer: 8
   m_Name: Ragdoll
   m_TagString: Untagged
@@ -298,6 +299,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d7bbeccd4d4a2b97cf4267867db878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3766803807974398801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228768413087005287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e9cb208d79497a9735dfdc2fc18344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedModifier: 0.01
 --- !u!1 &8228768413486147151
 GameObject:
   m_ObjectHideFlags: 0
