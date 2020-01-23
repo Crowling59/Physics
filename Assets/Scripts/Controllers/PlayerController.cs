@@ -9,9 +9,13 @@ namespace Controllers {
         [SerializeField] private float speed = 1f;
         [SerializeField] private BallSpawnerController ballSpawnerController = default;
         private Transform playerTransform;
+        private LayerMask ragdollLayer;
+
+        [SerializeField] private LineRenderer aimRenderer = default;
 
         private void Awake() {
             playerTransform = transform;
+            ragdollLayer = LayerMask.NameToLayer("Ragdoll");
             yawn = 0.0f;
             pitch = 0.0f;
         }
@@ -19,6 +23,8 @@ namespace Controllers {
         private void Update() {
             HandleMovement();
             HandleCameraMovement();
+            Raycast();
+            RenderAimingLine();
             HandleAction();
         }
 
@@ -41,6 +47,22 @@ namespace Controllers {
         private void HandleAction() {
             if (Input.GetButtonUp("Fire1"))
                 ballSpawnerController.SpawnBall();
+        }
+
+        private void Raycast() {
+            bool hit = Physics.Raycast(
+            playerTransform.position,
+            playerTransform.forward,
+            Mathf.Infinity,
+            ragdollLayer);
+            Debug.Log(hit);
+        }
+
+        private void RenderAimingLine() {
+            aimRenderer.positionCount = 2;
+            Vector3 playerPosition = playerTransform.position;
+            Vector3[] linePositions = { playerPosition, playerPosition + playerTransform.forward * 100f };
+            aimRenderer.SetPositions(linePositions);
         }
     }
 }
