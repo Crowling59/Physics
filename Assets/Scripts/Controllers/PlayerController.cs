@@ -52,10 +52,9 @@ namespace Controllers {
         private void Raycast() {
             bool hit = Physics.Raycast(
             playerTransform.position,
-            playerTransform.forward,
-            Mathf.Infinity,
-            ragdollLayer);
+            playerTransform.forward * 100f);
             Debug.Log(hit);
+            //Debug.DrawRay(playerTransform.position, playerTransform.forward * 100f, Color.green);
         }
 
         private void RenderAimingLine() {
