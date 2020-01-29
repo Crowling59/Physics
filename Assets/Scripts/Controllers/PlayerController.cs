@@ -25,7 +25,7 @@ namespace Controllers {
             HandleMovement();
             HandleCameraMovement();
             Raycast();
-            RenderAimingLine();
+            //RenderAimingLine();
             HandleAction();
         }
 
