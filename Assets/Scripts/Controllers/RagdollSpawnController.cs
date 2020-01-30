@@ -8,10 +8,18 @@ namespace Controllers {
         [SerializeField] private GameObject ragdollPrefab = default;
         private Bounds spawnBounds;
         [SerializeField] private float spawnSpeed = 1f;
+        private bool hasStartedSpawning;
 
         private void Awake() {
+            hasStartedSpawning = false;
             spawnBounds = spawnZone.bounds;
-            StartCoroutine(DoSpawns());
+        }
+
+        public void StartSpawning() {
+            if (!hasStartedSpawning) {
+                StartCoroutine(DoSpawns());
+                hasStartedSpawning = true;
+            }
         }
 
         private IEnumerator DoSpawns() {

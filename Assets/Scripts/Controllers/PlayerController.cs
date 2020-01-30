@@ -9,14 +9,12 @@ namespace Controllers {
         [SerializeField] private float speed = 1f;
         [SerializeField] private BallSpawnerController ballSpawnerController = default;
         private Transform playerTransform;
-        private LayerMask ragdollLayer;
 
         [SerializeField] private LineRenderer aimRenderer = default;
 
         private void Awake() {
             Cursor.lockState = CursorLockMode.Locked;
             playerTransform = transform;
-            ragdollLayer = LayerMask.NameToLayer("Ragdoll");
             yawn = 0.0f;
             pitch = 0.0f;
         }
@@ -55,7 +53,7 @@ namespace Controllers {
             bool hit = Physics.Raycast(
             playerTransform.position,
             playerTransform.forward * 100f);
-            Debug.Log(hit);
+            //Debug.Log(hit);
             //Debug.DrawRay(playerTransform.position, playerTransform.forward * 100f, Color.green);
         }
 
